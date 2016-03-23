@@ -1,0 +1,129 @@
+ul#menu>li, ul#menu>a {
+    @include margin(100px 0 -55px 0);
+    color: white;
+    font-family: $content;
+    font-weight: 600;
+    line-height: 1.8;
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    outline: 0;
+    display: none;
+    &:focus {
+        display: block;
+        color: #333;
+        background-color: #eee;
+        transition: all .5s;
+    }
+}
+
+div.global-nav{
+    div.nav-logo{
+        background-image: url('../images/MOD_M_WHITE.svg');
+        background-size: cover;
+        width:90px;
+        height:30px;
+        @include position(fixed, 24px null null 28px);
+        z-index: 1000;
+    }
+}
+#trigger, #burger, #burger:before, #burger:after {
+    position: fixed;
+    top: 21px;
+    left: 0px;
+    background: #F3B61F;
+    width: 18px;
+    height: 40px;
+    transition: .2s ease;
+    cursor: pointer;
+    z-index: 9999;
+    @include media ($mobile){
+        top: 13px;
+        left: 13px;
+    }
+}
+#trigger {
+    width: 38px;
+    height: 45px;
+    padding: 10px;
+    background: none;
+    top: 11px;
+    right: 19px;
+}
+#burger:before {
+    content: " ";
+    top: 34px;
+    display: none;
+    @include media ($mobile){
+        top: 21px;
+        right: 13px;
+    }
+
+}
+#burger:after {
+    content: " ";
+    top: 46px;
+    display: none;
+    @include media ($mobile){
+        top: 29px;
+        right: 13px;
+    }
+
+}
+#menu-toggle:checked + #trigger + #burger {
+    top: 45px;
+    width: 33px;
+    transform: rotate(180deg);
+    transition: transform .35s ease;
+    @include media ($mobile){
+        top: 25px;
+    }
+}
+
+#menu-toggle:checked + #trigger + #burger:before {
+    width: 20px;
+    top: -3px;
+    left: -7px;
+    transform: rotate(135deg) translateX(-5px);
+    transition: transform .35s ease;
+}
+#menu-toggle:checked + #trigger + #burger:after {
+    width: 20px;
+    top: 3px;
+    left: -7px;
+    transform: rotate(-135deg) translateX(-5px);
+    transition: transform .35s ease;
+}
+#menu {
+    position: absolute;
+    z-index: 9998;
+    margin: 0; padding: 0;
+    width: 0;
+    height: 0;
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: 51% 90%;
+    animation: not-checked-anim 1s both;
+    transition: 1s;
+    right:0;
+    cursor: pointer;
+    @include media($mobile) {
+       
+        width: 100vh;
+        height: 47px;
+        position: fixed;
+    }
+    @include media($lg-max) {
+        background-size: 1000%;
+    }
+}
+
+#menu-toggle:checked + #trigger + #burger + #menu {
+    animation: checked-anim 1s ease both;
+}
+#menu-toggle:checked + #trigger ~ #menu > li, a {
+    display: block;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}

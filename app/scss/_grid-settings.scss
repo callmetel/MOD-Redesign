@@ -1,0 +1,44 @@
+@import "../bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+// Adding a Visual Grid while you develop. Set to 'true.'
+$visual-grid: false;
+$visual-grid-color: #ccc;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.2;
+
+// Change the grid settings
+$column: 68px;
+$gutter: 35px;
+$grid-columns: 12;
+$max-width: 1206px;
+
+// Breakpoints
+$sm: new-breakpoint(min-width 200px 4);
+$smbg: new-breakpoint(min-width 480px 4);
+$md: new-breakpoint(min-width 768px 6);
+$hg: new-breakpoint(min-width 1140px 12);
+
+$xs-mobile: new-breakpoint(max-width 400px 6);
+$sm-mobile: new-breakpoint(min-width 320px max-width 600px, 6);
+$md-mobile: new-breakpoint(max-width 768px 6);
+$mobile: new-breakpoint(min-width 601px max-width 799px, 6);
+$rg-min: new-breakpoint(min-width 851px 12);
+$rg-max: new-breakpoint(min-width 980px max-width 992px);
+$lg-max: new-breakpoint(min-width 993px max-width 1199px, 12);
+$xl-min: new-breakpoint(min-width 1200px 12);
+$xl-max: new-breakpoint(min-width 1200px max-width 1440px);
+$xxl-min: new-breakpoint(min-width 1441px);
+$large-desktop: new-breakpoint(min-width 1600px max-width 2000px);
+$xl-desktop: new-breakpoint(min-width 2001px);
+
+
+//height breakpoint
+
+$small-height: new-breakpoint(max-height 600px);
+
+// // Neat Breakpoints
+// $medium-screen: em(640);
+// $large-screen: em(1140);
+
+// $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
+// $large-screen-up: new-breakpoint(min-width $large-screen 12);

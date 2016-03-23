@@ -1,0 +1,32 @@
+@import "fonts";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+div{
+	font-family: "Bella Heavy";
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 3.6px;
+	font-style: normal;
+}
+
+h1, div.slide-title{
+	font-weight: 400;
+	font-size: 100px;
+	line-height: 110px;
+	letter-spacing: -0.68px;
+}
+
+h2, div.slide-subtext{
+	font-family: "Avenir Next";
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 36px;
+	letter-spacing: -0.64px;
+}
+
+$content:'Avenir Next';

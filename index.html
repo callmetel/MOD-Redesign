@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MOD Worldwide</title>
+	<link rel="stylesheet" href="app/css/app.css">
+</head>
+<body>
+	<div class="global-nav">
+		<input type="checkbox" id="menu-toggle"/>
+		<label id="trigger" for="menu-toggle"></label>
+		<label id="burger" for="menu-toggle"></label>
+		<div class="nav-logo"></div>
+	</div>
+		
+		<ul id="menu">	
+			<li>MOD</li>
+			<li>OBJECTIVE</li>
+			<li>DISTINCT</li>
+		</ul>
+
+	<div id="main">
+		<div class="container">
+			<div id="img_background" class="global-background MOD-workspace-img" style="background-image:url('app/images/MOD-workspace.jpg');"></div>
+	        <video id="video_background" autoplay muted loop>
+	            <source class="video" src="app/images/mod-backgroundhome.mp4" type="video/mp4">
+	        </video>
+			<div class="slides-container slides">
+				<div class="slide-bg"></div>
+				<!-- <div class="left-rectangle"></div> -->
+				<div id="slide-mod" class="slide slide-0 is-current-slide">
+					<div class="hide-letters rectangles">
+						<!-- <div class="left-rectangle fade-rect"></div>
+						<div class="right-rectangle fade-rect"></div> -->
+						<div class="top-rectangle"></div>
+						<div class="bottom-rectangle"></div>
+					</div>
+					<div class="letter-mask"></div>
+					<div class="slide-info">
+						<div class="slide-title"><img src="app/images/MOD_logo-white.svg" alt="" id="MOD-logo" class="logo"></div>
+						<div class="slide-subtext">WE ARE MISFITS WHO CONFORM TO NOTHING.</div>
+						<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
+					</div>
+				</div>
+				<div id="slide-objective" class="slide slide-1 is-next-slide">
+					<div class="hide-letters rectangles">
+						<!-- <div class="left-rectangle fade-rect"></div>
+						<div class="right-rectangle fade-rect"></div> -->
+						<div class="top-rectangle"></div>
+						<div class="bottom-rectangle"></div>
+					</div>
+					<div class="slide-info">
+						<div class="slide-title">OBJECTIVE</div>
+						<div class="slide-subtext">WE ARE MISFITS WHO CONFORM TO NOTHING.</div>
+						<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
+					</div>
+				</div>
+				<div id="slide-distinct" class="slide slide-2">
+					<div class="hide-letters rectangles">
+						<!-- <div class="left-rectangle fade-rect"></div>
+						<div class="right-rectangle fade-rect"></div> -->
+						<div class="top-rectangle"></div>
+						<div class="bottom-rectangle"></div>
+					</div>
+					<div class="slide-info">
+						<div class="slide-title">DISTINCT</div>
+						<div class="slide-subtext">WE ARE MISFITS WHO CONFORM TO NOTHING.</div>
+						<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
+					</div>
+				</div>
+
+				<span id="m-scroll" class="tcon-indicator is-inactive" aria-label="scroll" aria-hidden="true">
+				  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="tcon-svgchevron" viewBox="0 0 30 36">
+				    <path class="a3" d="M0,0l15,16L30,0"></path>
+				    <path class="a2" d="M0,10l15,16l15-16"></path>
+				    <path class="a1" d="M0,20l15,16l15-16"></path>
+				  </svg>
+				</span>
+			</div>
+		</div>
+	</div>
+
+
+<script src="app/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="app/bower_components/gsap/src/minified/TweenMax.min.js"></script>
+<script src="app/js/plugins/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js"></script>
+ <script src="app/js/plugins/jquery.nicescroll/jquery.nicescroll.js"></script>
+<script src="app/js/lib/function.js"></script>
+<!--<script src="app/js.app.min.js"></script> -->
+<script type='text/javascript' id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:1429/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+</body>
+</html>
