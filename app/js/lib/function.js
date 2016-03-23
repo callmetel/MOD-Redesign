@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	mPageBtn = $('#slide-mod .slide-btn'),
 	oPageBtn = $('#slide-objective .slide-btn'),
 	dPageBtn = $('#slide-distinct .slide-btn');
-	TweenMax.set('#slide-objective .letter-mask, #slide-mod .letter-mask, #slide-distinct .letter-mask', {opacity:0});
+	TweenMax.set('.letter-mask-0, .letter-mask-1, .letter-mask-2', {opacity:0});
 
 	$("html").niceScroll();
 
@@ -266,10 +266,10 @@ mPageBtn.click(function(){
 	history.pushState(state, "Misfits", "/misfits");
 	$('body').unbind('mousewheel');
 	$('#slide-mod .slide-info').addClass('move-off-left');
-	TweenMax.to('#slide-mod .letter-mask', 1.25, {opacity:1, width:'5%'});
+	TweenMax.to('.letter-mask-0', 1.25, {opacity:1, width:'5%'});
 	$('.slide-bg').addClass('make-m-only');
 	$('#slide-mod .right-rectangle').addClass('is-inactive');
-
+	$('#slide-objective, #slide-distinct').detach();
 	setTimeout(function(){
 		$('.slides, #slide-mod, body').addClass('is-scrollable');
 		$( "#slide-mod .slide-info" ).after( "<div class=\'mPage'\></div>" );
@@ -283,13 +283,14 @@ oPageBtn.click(function(){
 	var state = {
 		"canBeAnything": true
 	};
+	
 	history.pushState(state, "Objective", "/objective");
 	$('body').unbind('mousewheel');
 	$('#slide-objective .slide-info').addClass('move-off-left');
-	TweenMax.to('#slide-objective .letter-mask', 1.25, {opacity:1, width:'50%'});
+	TweenMax.to('.letter-mask-1', 1.25, {opacity:1, width:'48%'});
 	$('.slide-bg').addClass('make-o-only');
 //	$('#slide-mod .right-rectangle').addClass('is-inactive');
-
+	
 	setTimeout(function(){
 		$('.slides, #slide-objective, body').addClass('is-scrollable');
 		$( "#slide-objective .slide-info" ).after( "<div class=\'oPage'\></div>" );
@@ -298,6 +299,7 @@ oPageBtn.click(function(){
 	setTimeout(function(){
 		$('#m-scroll').removeClass('is-inactive');
 	}, 2000);
+	$('#slide-mod, #slide-distinct').detach();
 });
 dPageBtn.click(function(){
 	var state = {
@@ -306,10 +308,9 @@ dPageBtn.click(function(){
 	history.pushState(state, "Distinct", "/distinct");
 	$('body').unbind('mousewheel');
 	$('#slide-distinct .slide-info').addClass('move-off-left');
-	TweenMax.to('#slide-distinct .letter-mask', 1.25, {opacity:1, width:'55%'});
+	TweenMax.to('.letter-mask-2', 1.25, {opacity:1, width:'55%'});
 	$('.slide-bg').addClass('make-d-only');
 //	$('#slide-mod .right-rectangle').addClass('is-inactive');
-
 	setTimeout(function(){
 		$('.slides, #slide-distinct, body').addClass('is-scrollable');
 		$( "#slide-distinct .slide-info" ).after( "<div class=\'oPage'\></div>" );
@@ -318,5 +319,6 @@ dPageBtn.click(function(){
 	setTimeout(function(){
 		$('#m-scroll').removeClass('is-inactive');
 	}, 2000);
+	$('#slide-mod, #slide-objective').detach();
 });
 });

@@ -381,29 +381,37 @@ h2, div.slide-subtext {
       .slides #slide-distinct .right-rectangle, .slides .slide-2 .right-rectangle {
         width: 150px; } }
 
-#slide-objective .letter-mask {
-  position: fixed;
+.letter-mask-1 {
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 40%;
+  width: 28%;
   background-color: black; }
 
-#slide-mod .letter-mask {
-  position: fixed;
+.letter-mask-0 {
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 0%;
   background-color: black; }
 
-#slide-distinct .letter-mask {
-  position: fixed;
+.letter-mask-2 {
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 50%;
   background-color: black; }
+
+.letter-mask-1::after, .letter-mask-2::after, .letter-mask-0::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2%;
+  width: 100%;
+  background: black; }
 
 .mPage {
   height: 1500px;
@@ -727,11 +735,11 @@ a.no-decoration, a:hover.no-decoration {
 .move-off-left {
   -webkit-filter: blur(100px);
   filter: blur(100px);
-  -webkit-transform: scaleY(0.01) translateX(-200%);
-  -moz-transform: scaleY(0.01) translateX(-200%);
-  -ms-transform: scaleY(0.01) translateX(-200%);
-  -o-transform: scaleY(0.01) translateX(-200%);
-  transform: scaleY(0.01) translateX(-200%);
+  -webkit-transform: scaleY(0.007) translateX(-200%);
+  -moz-transform: scaleY(0.007) translateX(-200%);
+  -ms-transform: scaleY(0.007) translateX(-200%);
+  -o-transform: scaleY(0.007) translateX(-200%);
+  transform: scaleY(0.007) translateX(-200%);
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   transition: all 1s ease-out; }

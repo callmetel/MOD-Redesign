@@ -240,25 +240,31 @@
 
 	}
 }
-#slide-objective .letter-mask{
-	@include position(fixed, 0 null null 0);
+.letter-mask-1{
+	@include position(absolute, 0 null null 0);
 	height: 100%;
-	width: 40%;
+	width: 28%;
 	background-color: black;
 
 }
-#slide-mod .letter-mask{
-	@include position(fixed, 0 null null 0);
+.letter-mask-0{
+	@include position(absolute, 0 null null 0);
 	height: 100%;
 	width: 0%;
 	background-color: black;
 
 }
-#slide-distinct .letter-mask{
-	@include position(fixed, 0 null null 0);
+.letter-mask-2{
+	@include position(absolute, 0 null null 0);
 	height: 100%;
 	width: 50%;
 	background-color: black;
 
 }
+.letter-mask-1::after, .letter-mask-2::after, .letter-mask-0::after{
+		@include position(absolute, 0 null null 0);
+	height: 2%;
+	width: 100%;
+	background:black;
 
+}

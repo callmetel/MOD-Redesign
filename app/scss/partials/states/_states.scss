@@ -138,7 +138,7 @@ a.no-decoration, a:hover.no-decoration{
 }
 .move-off-left{
 	@include filter(blur(100px));
-	@include transform(scaleY(.01) translateX(-200%));
+	@include transform(scaleY(.007) translateX(-200%));
 	@include transition(all 1s ease-out);
 }
 .make-m-only{
