@@ -145,6 +145,14 @@ a.no-decoration, a:hover.no-decoration{
 	background-position: -2% -5%!important;
 	@include transition(all 1s ease-out);
 }
+.make-o-only{
+	background-position: 34% -5%!important;
+	@include transition(all 1s ease-out);
+}
+.make-d-only{
+	background-position: 65% -5%!important;
+	@include transition(all 1s ease-out);
+}
 .is-scrollable{
 	overflow-y: auto!important;
 }

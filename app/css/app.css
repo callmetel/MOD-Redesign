@@ -381,7 +381,47 @@ h2, div.slide-subtext {
       .slides #slide-distinct .right-rectangle, .slides .slide-2 .right-rectangle {
         width: 150px; } }
 
+#slide-objective .letter-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background-color: black; }
+
+#slide-mod .letter-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: black; }
+
+#slide-distinct .letter-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: black; }
+
 .mPage {
+  height: 1500px;
+  width: 100%;
+  background: white;
+  color: black;
+  margin-top: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.oPage {
+  height: 1500px;
+  width: 100%;
+  background: white;
+  color: black;
+  margin-top: 100vh; }
+
+.dPage {
   height: 1500px;
   width: 100%;
   background: white;
@@ -455,7 +495,7 @@ div.global-nav div.nav-logo {
   position: fixed;
   top: 21px;
   left: 0px;
-  background: #F3B61F;
+  background: #D8DAD3;
   width: 18px;
   height: 40px;
   transition: .2s ease;
@@ -698,6 +738,18 @@ a.no-decoration, a:hover.no-decoration {
 
 .make-m-only {
   background-position: -2% -5% !important;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out; }
+
+.make-o-only {
+  background-position: 34% -5% !important;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  transition: all 1s ease-out; }
+
+.make-d-only {
+  background-position: 65% -5% !important;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   transition: all 1s ease-out; }
