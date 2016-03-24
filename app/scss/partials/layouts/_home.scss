@@ -18,6 +18,27 @@ div#main{
 			}
 			
 		}
+		.top-rectangle{
+			height: 2%;
+			@include position(fixed, 0 0 0 0);
+				background-color: black;
+				display:block;
+				width: 500vw;
+			
+			@include media($xl-min){
+				height: 2%;
+			}
+			@include media($lg-max){
+				@include position(fixed, 0 0 0 0);
+				background-color: black;
+				display:block;
+				width: 100%;
+				height: 15%;
+			}
+			@include media($rg-max){
+				height:25%;
+			}	
+		}
 		#video_background {
 			@include position(fixed, 0 0 0 0);
 			z-index: -1000;

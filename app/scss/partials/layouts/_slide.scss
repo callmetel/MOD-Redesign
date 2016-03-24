@@ -51,7 +51,7 @@
 			@include position(fixed, 0 0 0 0);
 				background-color: black;
 				display:block;
-				width: 100%;
+				width: 500vw;
 			
 			@include media($xl-min){
 				height: 2%;

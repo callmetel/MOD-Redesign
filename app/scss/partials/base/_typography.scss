@@ -30,3 +30,72 @@ h2, div.slide-subtext{
 }
 
 $content:'Avenir Next';
+
+#slide-contact{
+	#slide-contact-bg{
+		@include position(fixed, 0 0 0 0);
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background-size: cover;	
+		display: inherit;
+		background-image:url('../images/MOD-workspace.jpg');
+		@include filter(grayscale(100%) brightness(20%));
+	}
+	.slide-subtext{
+		width: 1500px;
+	}
+	width: 100%;
+	font-family: $content!important;
+	text-transform: uppercase;
+	.sub-head{
+		font-size: 28px;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+	.address{
+		font-size: 16px;
+		margin-top:30px;
+		line-height: 20px;
+		letter-spacing: 1px;
+		font-weight: 300;
+	}
+	.email{
+		font-family: $content!important;
+		font-weight: 500;
+		font-size: 16px;
+		margin-top: 26px;
+	}
+	a{
+		font-family: $content!important;
+		font-weight: 500;
+		text-decoration: none;
+		font-size: 16px;
+		margin-top: 17px;
+	}
+	span{
+		@include transform(rotate(-90deg));
+		background-image: url("../images/down-arrow-white.svg");
+	    background-size: 100%;
+	    width: 47px;
+	    background-repeat: no-repeat;
+	    height: 97px;
+	    display: block;
+	    float: right;
+	    margin-right: 30%;
+	    margin-top: -87px;
+	    margin-bottom: 0;
+	}
+	.left-text, .right-text{
+		display: inline-block;
+		width:40%;
+		list-style: none;
+		padding: 0;
+		vertical-align: top;
+	}
+	.right-text{
+		li:last-child{
+			margin-top:30px;
+		}
+	}
+}

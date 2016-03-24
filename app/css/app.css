@@ -76,6 +76,72 @@ h2, div.slide-subtext {
   line-height: 36px;
   letter-spacing: -0.64px; }
 
+#slide-contact {
+  width: 100%;
+  font-family: "Avenir Next" !important;
+  text-transform: uppercase; }
+  #slide-contact #slide-contact-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: inherit;
+    background-image: url("../images/MOD-workspace.jpg");
+    -webkit-filter: grayscale(100%) brightness(20%);
+    filter: grayscale(100%) brightness(20%); }
+  #slide-contact .slide-subtext {
+    width: 1500px; }
+  #slide-contact .sub-head {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 1px; }
+  #slide-contact .address {
+    font-size: 16px;
+    margin-top: 30px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: 300; }
+  #slide-contact .email {
+    font-family: "Avenir Next" !important;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 26px; }
+  #slide-contact a {
+    font-family: "Avenir Next" !important;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 17px; }
+  #slide-contact span {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-image: url("../images/down-arrow-white.svg");
+    background-size: 100%;
+    width: 47px;
+    background-repeat: no-repeat;
+    height: 97px;
+    display: block;
+    float: right;
+    margin-right: 30%;
+    margin-top: -87px;
+    margin-bottom: 0; }
+  #slide-contact .left-text, #slide-contact .right-text {
+    display: inline-block;
+    width: 40%;
+    list-style: none;
+    padding: 0;
+    vertical-align: top; }
+  #slide-contact .right-text li:last-child {
+    margin-top: 30px; }
+
 .tcon-indicator {
   position: fixed;
   bottom: 12vh;
@@ -206,7 +272,7 @@ h2, div.slide-subtext {
       left: 0;
       background-color: black;
       display: block;
-      width: 100%; }
+      width: 500vw; }
       @media screen and (min-width: 1200px) {
         .slides .hide-letters .top-rectangle {
           height: 2%; } }
@@ -455,6 +521,33 @@ div#main {
         height: 100%;
         background-size: cover;
         display: inherit; } }
+    div#main div.container .top-rectangle {
+      height: 2%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      display: block;
+      width: 500vw; }
+      @media screen and (min-width: 1200px) {
+        div#main div.container .top-rectangle {
+          height: 2%; } }
+      @media screen and (min-width: 993px) and (max-width: 1199px) {
+        div#main div.container .top-rectangle {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: black;
+          display: block;
+          width: 100%;
+          height: 15%; } }
+      @media screen and (min-width: 980px) and (max-width: 992px) {
+        div#main div.container .top-rectangle {
+          height: 25%; } }
     div#main div.container #video_background {
       position: fixed;
       top: 0;

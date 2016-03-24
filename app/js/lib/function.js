@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
 	mSlide = $('.slide-0'),
 	oSlide = $('.slide-1'),
 	dSlide = $('.slide-2'),
+	contactSlide = $('#slide-contact'),
 	currentSlide = $('.is-current-slide')
 	previousSlide = $('.slides .slide:eq(2)'),
 	nextSlide = currentSlide.next(),
@@ -19,13 +20,56 @@ jQuery(document).ready(function($) {
 		TweenLite.set('.is-current-slide', {x:0} );
 		TweenLite.set('.is-previous-slide', {x:'-100%', y:'-100%'} );
 		TweenLite.set('.is-next-slide', {x:'100%', y:'-100%'} );
+		TweenLite.set('.is-last-slide', {x:'200%', y:'-100%'} );
 		TweenLite.set('.slide-bg', {backgroundPosition:'5% -5%'})
 
 	});
 	$('body').bind('mousewheel keydown', function(e) {
 		if(e.originalEvent.wheelDelta / 120 > 0 || e.keyCode === 38  || e.keyCode === 37) {
 	       function checkSlideUp(){
+	       	if(contactSlide.hasClass('is-current-slide')) {
+	        	var curr = new TimelineMax(),
+	        	prev = new TimelineMax(),
+	        	next  = new TimelineMax();
 
+	            TweenMax.to(
+	            	'#slide-contact', 1.5, {
+	            	
+	     
+	            		x:'100%',  ease:Power2.easeOut
+
+	            	}
+            	);
+		        TweenMax.fromTo(
+	        		'.slide-bg', 1.5, {
+	        			x:'0px', /* negative width of background image your animating - left top */
+	        			ease: Linear.easeNone /* make sure you use Linear.easeNone so its smooth */
+	        		},
+	        		{
+	        			backgroundPosition: '68%, -5%', /* negative width of background image your animating - left top */
+	        			ease: Linear.easeNone /* make sure you use Linear.easeNone so its smooth */
+	        		}   
+
+        		);
+	        	curr.fromTo(
+	        		dSlide, 1.5, {
+	        			x:'-100%', y:'-200%', /* negative width of background image your animating - left top */
+	        			ease: Linear.easeNone /* make sure you use Linear.easeNone so its smooth */
+	        		},
+	        		{
+	        			x:'.00001%', /* negative width of background image your animating - left top */
+	        			ease: Linear.easeNone /* make sure you use Linear.easeNone so its smooth */
+	        		}   
+
+	        		);
+	            setTimeout(function(){
+	            	$('#slide-contact').removeClass('is-current-slide').addClass('is-last-slide');
+	            	dSlide.removeClass('is-previous-slide');
+	            	TweenMax.set(dSlide, {className:'is-current-slide'});
+
+	            }, 1550);
+		           
+		    }
 	       	if(mSlide.hasClass('is-current-slide')) {
 
 	       	}
@@ -255,6 +299,47 @@ jQuery(document).ready(function($) {
 		      //       		opacity:1    
 		      //       	}
 	    			// );
+	            }, 1550);
+	        }
+	        if(dSlide.hasClass('is-current-slide')) {
+	        	var curr = new TimelineMax(),
+	        	prev = new TimelineMax(),
+	        	next  = new TimelineMax();
+
+	        	TweenMax.fromTo(
+	        		'.slide-bg', 1.5, {
+	        			x:'0px', /* negative width of background image your animating - left top */
+	        			ease: Linear.easeNone /* make sure you use Linear.easeNone so its smooth */
+	        		},
+	        		{
+	        			backgroundPosition: '88%, -5%', /* negative width of background image your animating - left top */
+	        			ease: Linear.easeNone /* make sure you use Linear.easeNone so its smooth */
+	        		}   
+
+	        		);
+	        	TweenMax.fromTo(
+	        		'#slide-contact', 1.5, {
+	        			x:'100%',y:'-300%', /* negative width of background image your animating - left top */
+	        			ease: Linear.easeNone /* make sure you use Linear.easeNone so its smooth */
+	        		},
+	        		{
+	        			x:'.00001%', /* negative width of background image your animating - left top */
+	        			ease: Linear.easeNone /* make sure you use Linear.easeNone so its smooth */
+	        		}   
+
+	        		);
+
+
+	            curr.to(
+	            	dSlide, 1.5, {
+	            		x:'-100%', ease:Power2.easeOut    
+	            	}
+	            	);
+
+	            setTimeout(function(){
+	            	$('#slide-contact').addClass('is-current-slide').removeClass('is-last-slide');
+	            	TweenMax.set(dSlide, {className:'is-previous-slide'});
+	            	//dSlide.removeClass('is-current-slide');
 	            }, 1550);
 	        }
 	    }
