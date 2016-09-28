@@ -24,16 +24,23 @@
 /// Layouts
 /// /////////////////////////////////////// 
 
+	@import "partials/layouts/about";
+	@import "partials/layouts/contact";
+	@import "partials/layouts/culture";
 	@import "partials/layouts/slide";
 	@import "partials/layouts/page";
 	@import "partials/layouts/home";
+	@import "partials/layouts/lettermask";
 
 
 /// ////////////////////////////////////////
 /// Modules
 /// /////////////////////////////////////// 
 
+	@import "partials/modules/lorem";
 	@import "partials/modules/nav";
+	@import "partials/modules/page-indicators";
+	@import "partials/modules/preloader";
 
 /// ////////////////////////////////////////
 /// States

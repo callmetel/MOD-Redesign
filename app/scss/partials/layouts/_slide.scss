@@ -4,104 +4,154 @@
 	
 	.slide-bg{
 		background-image: url('../images/MOD_Letters_Black.svg');
-		background-size: 3500px;
 		background-repeat: no-repeat;
-
 		@include position(fixed, 0 0 0 0);
-		width:100%;
+		width:300%;
 		height: 100%;
 		z-index: -1;
+		background-size: 3790px;
 		@include media($xl-desktop){
-			background-size: 5500px;
+			background-size: 6310px;
+		}
+		@include media($macbook-pro-13){
+			background-size: 3330px;
+		}
+		
+		@include media($v-ipad-max-screen){
+			background-size: 3450px;
+		}
+		@include media($h-ipad-max-screen){
+			background-size: 2890px;
+		}
+		@include media($v-iphone-6-plus){
+			background-size: 1900px;
+		}
+		@include media($v-iphone-5){
+			background-size: 1500px;
+		}
+		&:before{
+			content:'';
+			display: block;
+			height:2.5vh;
+			width: 300%;
+			background: black;
+			@include position(fixed, 0 0 null 0);
+			
+			@include media($h-ipad-max-screen){
+				height:2.5vh;
+			}
+			@include media($v-iphone-6-plus){
+				height:120px;
+			}
+			@include media($v-iphone-6){
+				height:100px;
+			}
+			@include media($v-iphone-5){
+				height: 80px;
+			}
+			
+
+		}
+		&:after{
+			content:'';
+			display: block;
+			height: 2.5vh;
+			width: 300%;
+			background: black;
+			@include position(fixed, null 0 0 0);
+
+			@include media($h-ipad-max-screen){
+				height: 2.5vh;
+			}
+
+			@include media($v-iphone-6-plus){
+				height:30px;
+			}			
 		}
 	}
+
 	.slide{
 		overflow: hidden;
 		width: 100vw;
 		height: 100vh;
 		z-index: 4;
 	}
-	.left-rectangle{
-			@include position(fixed, 0 null null 0);
-			height: 100%;
-			width: 20%;
-			background-color: black;
-			backdrop-filter: grayscale(100%);
-			-webkit-backdrop-filter: grayscale(100%);
-	}
+
 	.hide-letters{
 		@include position(fixed, 0 0 0 0);
 		width:100%;
 		height: 100%;
 		z-index: 3;
-		.left-rectangle{
-			@include position(fixed, 0 null null 0);
-			height: 100%;
-			backdrop-filter: grayscale(100%);
-			-webkit-backdrop-filter: grayscale(100%);
-		}
-		.right-rectangle{
-			@include position(fixed, 0 0 null null);
-			height:100%;
-			backdrop-filter: grayscale(100%);
-			-webkit-backdrop-filter: grayscale(100%);
-		}
-		.top-rectangle{
-			height: 2%;
-			@include position(fixed, 0 0 0 0);
-				background-color: black;
-				display:block;
-				width: 500vw;
-			
-			@include media($xl-min){
-				height: 2%;
-			}
-			@include media($lg-max){
-				@include position(fixed, 0 0 0 0);
-				background-color: black;
-				display:block;
-				width: 100%;
-				height: 15%;
-			}
-			@include media($rg-max){
-				height:25%;
-			}	
-		}
-		.bottom-rectangle{
-			display:block;
-			@include position(fixed, null 0 0 0);
-				background-color: black;
-				display:block;
-				width: 100%;
-				height: 20%;
-			@include media($xl-max){
-				height:5%;
-			}
-			@include media($lg-max){
-				@include position(fixed, null 0 0 0);
-				background-color: black;
-				display:block;
-				width: 100%;
-				height: 10%;
-			}
-			@include media($md-mobile){
-				height:5%;
-			}
-			@include media($xl-desktop){
-				height: 5%;
-			}		
-		}
+
 	}
+
 	.slide-info{
-		@include position(fixed, 43% null null 12%);
-		z-index: 1000;
-		width: 408px;
-		height: 175px;
+		@include position(fixed, 48.5vh null null 5.468vw);
+		z-index: 999;
+		
+		@include media($xl-desktop){
+			left: 10.068vw;
+		}
+		@include media($most-common-screen){
+			left: 5.468vw;
+		}
+		@include media($macbook-pro-13){
+			left: 5.468vw;
+		}
+		@include media($h-ipad-max-screen){
+			left: 5.468vw;
+		}
+		@include media($v-iphone-6-plus){
+			top:27%;
+			width:60.5%;
+		}
+		@include media($v-iphone-6){
+			top:22%;
+		}
+		@include media($v-iphone-5){
+			top:22%;
+		}
+		.slide-title{
+			
+			vertical-align: top;
+			display: inline-block;
+		}
+		.slide-subtext{
+			display:inline-block;
+			vertical-align: top;
+			margin-left: 2.03vw;
+			margin-top: 0px;
+			
+			@include media($v-iphone-6-plus){
+				width:100%;
+			}
+			h2{
+				margin-bottom: 15px;
+			}
+			p{
+				max-width: 18.81vw;
+				margin-top: 5vh;
+
+				@include media($h-ipad-max-screen){
+					max-width: 23.81vw;
+				}
+
+			}
+			
+		}
+
 		.slide-btn{
-			witdh: 47px;
-			height: 47px;
-			margin-top:100px;
-			cursor: pointer;
+			witdh: 2.52vw;
+			height: 2.52vw;
+			margin-top: 18px;
+			cursor: pointer!important;
+			display: block;
+
+			@include media($h-ipad-max-screen){
+				witdh: 25px;
+				height: 25px;
+			}
+
 		}
 
 	}
@@ -113,158 +163,36 @@
 			}
 			
 		}
-		.left-rectangle{
-			background-color: black;
-			@include media($xl-max){
-				width:40%;
-			}
-			@include media($lg-max){
-				width:20%;
-			}
-			@include media($rg-max){
-				width:10%;
-			}
-			@include media($xxl-min){
-				width:50%;
-			}
-			@include media($xl-desktop){
-				width:50%;
-			}
-		}
-		.right-rectangle{
-			@include position(fixed, 0 0 null null);
-			height:100%;
-			width:0px;
-			background-color: rgba(0,0,0,0.8);
-			
-			@include media($xl-max){
-				width:125px;
-			}
-			@include media($lg-max){
-				width:100px;
-			}
-			@include media($md-mobile){
-				width:0;
-			}
-			@include media($xxl-min){
-				width:110px;
-			}
-			@include media($large-desktop){
-				width: 100px;
-			}
-			@include media($xl-desktop){
-				width: 150px;
-			}
-		}
 
 	}
 	#slide-objective, .slide-1{
-		.left-rectangle{
-			@include media($xl-min){
-				content:'';
-				display: block;
-				background-color: rgba(0,0,0,0.8);
-				width:350px;
-				height: 100vh;
-				@include position(fixed, 0 null null 0);
 
-			}
-		}
-		.right-rectangle{
-			@include position(fixed, 0 0 null null);
-			height:100%;
-			width:0px;
-			background-color: rgba(0,0,0,0.8);
-			
-			@include media($lg-max){
-				width:100px;
-			}
-			@include media($md-mobile){
-				width:0;
-			}
-			@include media($xl-min){
-				width:350px;
-			}
-			@include media($large-desktop){
-				width: 10px;
-			}
-			@include media($xl-desktop){
-				width: 150px;
-			}
-		}
 	}
 
 	#slide-distinct, .slide-2{
 		
-		.left-rectangle{
-			background-color: rgba(0,0,0,0.8);
-
-			@include media($lg-max){
-				width:20%;
-			}
-			@include media($rg-max){
-				width:10%;
-			}
-			@include media($xl-min){
-				width: 50%;
-			}
-			@include media($xl-desktop){
-				width:50%;
-			}
-		}
-		.right-rectangle{
-			@include position(fixed, 0 0 null null);
-			height:100%;
-			width:0px;
-			background-color: black;
-			
-			@include media($xl-max){
-				width:125px;
-			}
-			@include media($lg-max){
-				width:100px;
-			}
-			@include media($md-mobile){
-				width:0;
-			}
-			@include media($xl-min){
-				width:10px;
-			}
-			@include media($large-desktop){
-				width: 10px;
-			}
-			@include media($xl-desktop){
-				width: 150px;
-			}
-		}
-
+		
 	}
 }
-.letter-mask-1{
-	@include position(absolute, 0 null null 0);
-	height: 100%;
-	width: 28%;
-	background-color: black;
 
-}
-.letter-mask-0{
-	@include position(absolute, 0 null null 0);
-	height: 100%;
-	width: 0%;
-	background-color: black;
-
-}
-.letter-mask-2{
-	@include position(absolute, 0 null null 0);
-	height: 100%;
-	width: 50%;
-	background-color: black;
-
-}
-.letter-mask-1::after, .letter-mask-2::after, .letter-mask-0::after{
-		@include position(absolute, 0 null null 0);
-	height: 2%;
-	width: 100%;
-	background:black;
-
-}
+// #slide-objective, #slide-distinct{
+// 	.slide-subtext{
+// 		margin-left: 44px;
+// 		@include media($v-ipad-max-screen){
+// 			margin-left:0;
+// 		}
+// 	}
+// 	.slide-btn{
+// 		margin-left: 144px;
+// 		@include media($v-ipad-max-screen){
+// 			margin-left:0;
+// 		}
+// 	}
+// }
+// #slide-contact{
+// 	.slide-info{
+// 		&:before{
+// 			display: none!important;
+// 		}
+// 	}
+// }

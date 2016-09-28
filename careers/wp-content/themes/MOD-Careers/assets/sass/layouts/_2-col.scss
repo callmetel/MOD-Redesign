@@ -1,0 +1,99 @@
+.left{
+	@include media($mobile){
+		width:100%;
+		display: block;
+		@include pad(10px);
+	}
+	@include media($rg-min){
+		width:49%;
+		float: left;
+		margin-left:auto;
+		margin-right: auto;
+	}
+}
+
+.right{
+	@include media($mobile){
+		width:100%;
+		display: block;
+		@include pad(10px);
+	}
+	@include media($rg-min){
+		width:49%;
+		float: right;
+		margin-left:auto;
+		margin-right: auto;
+	}
+}
+
+.left, .right{
+	@include media($mobile){
+		text-align: center;
+	}
+	@include media($rg-min){
+		text-align: left;
+	}
+	h1, h2, h3, h4, p, button, a, input{
+		display: block;
+		margin-bottom: 0;
+		@include media($rg-min){
+			margin-left: 50px;
+		}
+	}
+
+	a:hover{
+		border:none;
+		text-decoration: underline;
+	}
+
+	h1{
+		font-family: $title;
+		font-size:3.1875rem;
+		line-height: 5.5625rem;
+		letter-spacing: .1rem;
+	}
+
+	h2{
+		font-family: $title;
+		font-size: 1.9375rem;
+		line-height: 3.3625rem;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+	}
+
+	a, h3{
+		font-family: $reg;
+		font-size:1.4375rem;
+		letter-spacing: .1rem;
+		span{
+			margin-left: 20px;
+			font-family: $bold;
+		}
+	}
+	
+}
+
+.divider{
+	background-color:white;
+	@include media($mobile){
+		width:80%;
+		height: 3px;
+		margin:5px auto;
+	}
+	@include media($rg-min){
+		width:3px;
+		height:65%;
+		float: left;	
+	}
+	
+}
+
+#auditions{
+	.left {
+		@include media($rg-min){
+			h1, p{
+				margin-left: 0px!important;
+			}
+		}
+	}
+}

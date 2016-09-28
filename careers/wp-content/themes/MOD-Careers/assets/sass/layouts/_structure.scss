@@ -1,0 +1,66 @@
+/* =Structure/Scaffolding
+-------------------------------------------------------------- */
+html {
+	background-color: $base-background-color;
+	text-rendering: optimizeLegibility;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body{
+	color: #fff;
+	font-family:$content;
+	background-color: #000;
+}
+
+#page {
+	 // @include outer-container;
+
+}
+.wrap{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+ul{
+	padding-left: 0px;
+}
+
+section{
+	@include media($mobile){
+		height:80vh;
+    	overflow-y:auto;	
+	}
+	
+}
+ul.career-categories-list{
+	width: 100%;
+	color: black;
+	height: 100vh;
+	padding-top: 20vh;
+	padding-left: 10vw;
+	list-style: none;
+	background: white;
+
+	a{
+
+	}
+  li.career-category{
+    text-transform: uppercase;
+    font-weight: $reg;
+    font-size: 3.5rem;
+    text-align: left;
+    letter-spacing: -.2rem;
+    line-height: 4rem;
+  }
+  li#category-heading{
+  	font-weight: $bold;
+  	font-size: 4rem;
+  	line-height: 7rem;
+  }
+  
+}

@@ -1,0 +1,237 @@
+.letter-mask-0{
+	&:before{
+		content:'';
+		@include position(absolute, 0 null null 0);
+		height: 100%;
+		background-color: $transBlack;
+		width: 0%;
+		@include media($xl-desktop){
+			width: 20%;
+			background-color: black;
+		}
+		@include media($most-common-screen){
+			width: 15%;
+			background-color: black;
+		}
+	}
+	&:after{
+		content:'';
+		@include position(absolute, 0 0 null null);
+		height: 100%;
+		background-color: $transBlack;
+		width: 9%;
+		@include media($xl-desktop){
+			width: 0%;
+		}
+		@include media($most-common-screen){
+			width: 0%;
+		}
+		@include media($macbook-pro-13){
+			width: 0%;
+		}
+		@include media($h-ipad-max-screen){
+			width: 8%;
+		}
+		@include media($v-ipad-max-screen){
+			width: 0%;
+		}
+	}
+
+}
+
+.single-letter-mask-0{
+	opacity:0;
+	&:before{
+		content:'';
+		@include position(absolute, 0 null null 0);
+		height: 100%;
+		background-color: black!important;
+		width: 5%;
+
+		@include media($xl-desktop){
+			width:10%;
+		}
+		@include media($h-ipad-max-screen){
+			width: 22%;
+		}
+	}
+	&:after{
+		content:'';
+		@include position(absolute, 0 0 null null);
+		height: 100%;
+		background-color: black!important;
+		@include media($xl-desktop){
+			width: 25%;
+		}
+		@include media($most-common-screen){
+			width: 22%;
+		}
+		@include media($h-ipad-max-screen){
+			width: 20%!important;
+		}
+	}
+
+}
+
+.letter-mask-1{
+	&:before{
+		content:'';
+		@include position(absolute, 0 null null 0);
+		height: 100%;
+		background-color: $transBlack;
+		width: 25%;
+		@include media($xl-desktop){
+			width: 48%;
+		}
+		@include media($most-common-screen){
+			width: 44%;
+		}
+		@include media($macbook-pro-13){
+			width: 46%;
+		}
+		@include media($v-ipad-max-screen){
+			width: 16%;
+		}
+		@include media($h-ipad-max-screen){
+			width: 43%;
+		}
+		
+	}
+	&:after{
+		content:'';
+		@include position(absolute, 0 0 null null);
+		height: 100%;
+		background-color: $transBlack;
+		width: 25%;
+		
+		@include media($xl-desktop){
+			width: 0%;
+		}
+		@include media($most-common-screen){
+			width: 0%;
+		}
+		@include media($macbook-pro-13){
+			width: 0%;
+		}
+		@include media($h-ipad-max-screen){
+			width: 20%;
+		}
+		@include media($v-ipad-max-screen){
+			width: 0%;
+		}
+	}
+
+}
+
+
+.single-letter-mask-1{
+	opacity:0;
+	&:before{
+		content:'';
+		@include position(absolute, 0 null null 0);
+		height: 100%;
+		background-color: black!important;
+		width: 25%;
+		@include media($xl-desktop){
+			width: 24%;
+		}
+		@include media($h-ipad-max-screen){
+			width: 22%;
+		}
+	}
+	&:after{
+		content:'';
+		@include position(absolute, 0 0 null null);
+		height: 100%;
+		background-color: black!important;
+		width: 25%;
+		@include media($xl-desktop){
+			width: 24%;
+		}
+		@include media($macbook-pro-13){
+			width: 27%!important;
+		}
+		@include media($h-ipad-max-screen){
+			width: 20%!important;
+		}
+	}
+
+}
+
+.letter-mask-2{
+	&:before{
+		content:'';
+		@include position(absolute, 0 null null 0);
+		height: 100%;
+		background-color: $transBlack;
+		width: 28%;
+		@include media($xl-desktop){
+			width: 44%;
+		}
+		@include media($most-common-screen){
+			width: 49%;
+		}
+		@include media($macbook-pro-13){
+			width: 48%;
+		}
+		@include media($v-ipad-max-screen){
+			width: 25%;
+		}
+		@include media($h-ipad-max-screen){
+			width: 42%;
+		}
+		@include media($v-iphone-6){
+			width: 33%;
+		}
+		@include media($v-iphone-5){
+			width: 29%;
+		}
+	}
+	&:after{
+		content:'';
+		@include position(absolute, 0 0 null null);
+		height: 100%;
+		background-color: $transBlack;
+		width: 25%;
+		@include media($xl-desktop){
+			width: 0%;
+		}
+		@include media($most-common-screen){
+			width: 0%;
+		}
+		@include media($macbook-pro-13){
+			width: 0%;
+		}
+		@include media($h-ipad-max-screen){
+			width: 22%;
+		}
+		@include media($v-ipad-max-screen){
+			width: 0%;
+		}
+	}
+
+}
+.single-letter-mask-2{
+	opacity:0;
+	&:before{
+		content:'';
+		@include position(absolute, 0 null null 0);
+		height: 100%;
+		background-color: black!important;
+		width: 28%!important;
+		@include media($h-ipad-max-screen){
+			width: 22%!important;
+		}
+	}
+	&:after{
+		content:'';
+		@include position(absolute, 0 0 null null);
+		height: 100%;
+		background-color: black!important;
+		width: 25%!important;
+		@include media($h-ipad-max-screen){
+			width: 20%!important;
+		}
+	}
+
+}

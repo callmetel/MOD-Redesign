@@ -1,18 +1,20 @@
 .is-active{
 	display: inherit;
 	opacity: 1!important;
-	@include transition(all 5s ease-in-out);
+	@include transition(all .5s ease-in-out);
 }
 .is-inactive{
 	display: none;
 	opacity: 0;
-	@include transition(all 5s ease-in-out);
+	@include transition(all .5s ease-in-out);
 }
 .is-visible{
 	visibility: visible;
+	@include transition(all .5s ease-in-out);
 }
 .is-hidden{
 	visibility: hidden;
+	@include transition(all 1s ease-in-out);
 }
 
 .is-disabled{
@@ -141,6 +143,11 @@ a.no-decoration, a:hover.no-decoration{
 	@include transform(scaleY(.007) translateX(-200%));
 	@include transition(all 1s ease-out);
 }
+.move-off-right{
+	@include filter(blur(100px));
+	@include transform(scaleY(.007) translateX(200%));
+	@include transition(all 1s ease-out);
+}
 .make-m-only{
 	background-position: -2% -5%!important;
 	@include transition(all 1s ease-out);
@@ -159,4 +166,18 @@ a.no-decoration, a:hover.no-decoration{
 .change-pos-abs{
 	position:absolute!important;
 	z-index:1!important;
+}
+.faded{
+	opacity: .35;
+}
+.has-overlay{
+	opacity: .25;
+}
+.nobg{
+	&:before{
+		background: transparent!important;
+	}
+	&:after{
+		background: transparent!important;
+	}
 }

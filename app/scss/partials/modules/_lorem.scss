@@ -1,0 +1,29 @@
+.mPage{
+	video.video-section{
+		width: 100%;
+	}
+	a.play-btn{
+		@include position(absolute, 35.875vh 0 0 0);
+		width:100%;
+		text-decoration: none;
+
+		&:before{
+			content:'ESSENCE';
+			display: block;
+			font-family: 'Bella Heavy';
+			font-size: 22.5rem;
+			color: white;
+		}
+		&:after{
+			content:'';
+			display: block;
+			background-image: url(../images/play.png);
+			background-size: cover;
+			width:100px;
+			height:100px;
+			@include position(absolute, 12vh 0 0 0);
+			margin: 0 auto;
+		}
+	}
+	
+}

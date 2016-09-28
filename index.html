@@ -2,117 +2,457 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MOD Worldwide</title>
+	<script type="text/javascript" src="//fast.fonts.net/jsapi/f5903750-8000-42f7-a667-c62502d80e78.js"></script>
 	<link rel="stylesheet" href="app/css/app.css">
 </head>
-<body>
-	<div class="global-nav">
-		<input type="checkbox" id="menu-toggle"/>
-		<label id="trigger" for="menu-toggle"></label>
-		<label id="burger" for="menu-toggle"></label>
-		<div class="nav-logo"></div>
-	</div>
-		
-		<ul id="menu">	
-			<li>MOD</li>
-			<li>OBJECTIVE</li>
-			<li>DISTINCT</li>
-		</ul>
+<body class="is-loading" id="main-wrap">
 
-	<div id="main">
-		<div class="container">
-			<div id="img_background" class="global-background MOD-workspace-img" style="background-image:url('app/images/MOD-workspace.jpg');"></div>
-			<div class="top-rectangle"></div>
-	        <video id="video_background" autoplay muted loop>
-	            <source class="video" src="app/images/mod-backgroundhome.mp4" type="video/mp4">
-	        </video>
-			<div class="slides-container slides">
-				<div class="letter-mask-0"></div>
-				<div class="letter-mask-1"></div>
-				<div class="letter-mask-2"></div>
-				<div class="slide-bg"></div>
-				<!-- <div class="left-rectangle"></div> -->
-				<div id="slide-mod" class="slide slide-0 is-current-slide">
-					<div class="hide-letters rectangles">
-						<!-- <div class="left-rectangle fade-rect"></div>
-						<div class="right-rectangle fade-rect"></div> -->
-					
-						<div class="bottom-rectangle"></div>
-					</div>
-					<div class="slide-info">
-						<div class="slide-title"><img src="app/images/MOD_logo-white.svg" alt="" id="MOD-logo" class="logo"></div>
-						<div class="slide-subtext">WE ARE MISFITS WHO CONFORM TO NOTHING.</div>
-						<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
-					</div>
-				</div>
-				<div id="slide-objective" class="slide slide-1 is-next-slide">
-					<div class="hide-letters rectangles">
-						<!-- <div class="left-rectangle fade-rect"></div>
-						<div class="right-rectangle fade-rect"></div> -->
-						<div class="bottom-rectangle"></div>
-					</div>
-					<div class="slide-info">
-						<div class="slide-title">OBJECTIVE</div>
-						<div class="slide-subtext">WE ARE MISFITS WHO CONFORM TO NOTHING.</div>
-						<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
-					</div>
-				</div>
-				<div id="slide-distinct" class="slide slide-2">
-					<div class="hide-letters rectangles">
-						<!-- <div class="left-rectangle fade-rect"></div>
-						<div class="right-rectangle fade-rect"></div> -->
-						<div class="bottom-rectangle"></div>
-					</div>
-					<div class="slide-info">
-						<div class="slide-title">DISTINCT</div>
-						<div class="slide-subtext">WE ARE MISFITS WHO CONFORM TO NOTHING.</div>
-						<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
-					</div>
-				</div>
-				<div id="slide-contact" class="slide slide-3 is-last-slide">
-					<div id="slide-contact-bg"></div>
-					<div class="slide-info">
-						<div class="slide-title">CONTACT</div>
-						<div class="slide-subtext">
-							<ul class="left-text">
-								<li class="sub-head">MOD WORLDWIDE</li>
-								<li class="address">121 S. BROAD STREET, SUITE 210<br>PHILADELPHIA, PA 19107<br>215.732.7666</li>
-								<a href="mailto:INFO@MODWORLDWIDE.COM"><li class="email">INFO@MODWORLDWIDE.COM</li></a>
-							</ul>
-							<ul class="right-text">
-								<li class="sub-head">
-									WORK WITH US
-									<a href="mailto:DESIGN@MODWORLDWIDE.COM">DESIGN@MODWORLDWIDE.COM</a>
-									<span class="work-arrow-btn"></span>
-								</li>
-								<li class="sub-head">
-									CAREERS
-									<a href="mailto:CAREERS@MODWORLDWIDE.COM">DESIGN@MODWORLDWIDE.COM</a>
-									<a href="../careers/"><span class="careers-arrow-btn"></span></a>
-								</li>
-							</ul>
+	<div id="preloader">
+		<div class="loader-section section-left"></div>
+    	<div class="loader-section section-right"></div>
+        <div class="txt">
+        	<div class="mod-loading-container">
+        		<img src="app/images/MOD_LOGO-BLACK.svg" alt="mod loading" class="mod-loading">
+        		<div class="progress"><span></span></div>
+        	</div>
+        </div>
+    </div>
+   
+	<div class="page-content load">
+		<header>
+			<nav id="global-nav">
+				<a href="#" class="toggle-menu">
+					<span id="menu-toggle"></span>
+					<span id="trigger"></span>
+					<span id="burger"></span>
+					<span class="nav-logo"></span>
+					<span class="close nav-is-inactive"><i></i></span>
+				</a>
+				<ul id="menu" class="nav-menu nav-is-inactive">	
+					<li><span class="nav-number">01</span><span class="nav-title">ESSENCE</span></li>
+					<li><span class="nav-number">02</span><span class="nav-title">ABOUT</span></li>
+					<li><span class="nav-number">03</span><span class="nav-title">CULTURE</span></li>
+					<li><span class="nav-number">04</span><span class="nav-title">CONTACT</span></li>
+				</ul>
+			</nav>
+
+			<div id="page-indicators">
+				<a href="#" id="page-1" class="page-indicator is-current-page">01</a>
+				<a href="#" id="page-2" class="page-indicator">02</a>
+				<a href="#" id="page-3" class="page-indicator">03</a>
+				<a href="#" id="page-4" class="page-indicator">04</a>
+			</div>	
+		</header>
+		
+
+		<div id="main">
+			<div class="container">
+				<div id="img_background" class="global-background MOD-workspace-img load" style="background-image:url('');"></div>
+		        <video id="video_background" autoplay muted loop>
+		            <source class="video" src="app/images/mod-backgroundhome.mp4" type="video/mp4">
+		        </video>
+				<div class="slides-container slides">
+					<div class="letter-mask-0"></div>
+					<div class="letter-mask-1"></div>
+					<div class="letter-mask-2"></div>
+					<div class="slide-bg load"></div>
+
+					<div id="slide-mod" class="slide slide-0 is-current-slide">
+						<div class="slide-info">
+							<div class="slide-title text faded">01</div>
+							<div class="slide-subtext">
+								<h2>Defiantly</h2>
+								<h3>We refuse to conform.</h3> 
+								<p>No comfort in complacency.<br>No satisfaction in the status quo.<br>Built to shape impressions.</p>
+								<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
+							</div>
 						</div>
 					</div>
+					<div id="slide-objective" class="slide slide-1 is-next-slide load-next">
+						<div class="slide-info">
+							<div class="slide-title faded">02</div>
+							<div class="slide-subtext">
+								<h2>ADAMANTLY</h2>
+								<h3>We refuse to follow.</h3> 
+								<p>No independent thinkers that make.<br>Forever inspired to create.<br>Designed to take the lead.</p>
+								<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
+							</div>
+						</div>
+					</div>
+					<div id="slide-distinct" class="slide slide-2 load-next">
+						<div class="slide-info">
+							<div class="slide-title faded">03</div>
+							<div class="slide-subtext">
+								<h2>TENACIOSLY</h2>
+								<h3>We refuse to be content.</h3> 
+								<p>A place of discovery.<br>To think, laugh, critique, question.<br>A team to encourage progress.</p>
+								<img class="slide-btn down-arrow" src="app/images/down-arrow-white.svg" alt="slide button">
+							</div>
+						</div>
+					</div>
+					<div id="slide-contact" class="slide slide-3 is-last-slide load-next">
+						<div id="slide-contact-bg" class="load"></div>
+						<div class="slide-info">
+							<div class="slide-title faded">04</div>
+							<div class="slide-subtext">
+								<h2>CONTACT</h2>
+								<div class="contact-container">
+									<a href="#" class="address"><span class="address-logo"></span>121 S BROAD ST PHILA PA 19107</a>
+									<ul class="contact-links">
+										<li class="contact-link">
+											<p>215 732 7666</p>
+											<a href="mailto:info@themoderati.com" class="faded">info@themoderati.com</a>
+										</li>
+										<li class="contact-link">
+											<p>Work with us</p>
+											<a href="mailto:design@themoderati.com" class="faded">design@themoderati.com</a>
+										</li>
+										<li class="contact-link">
+											<p>Careers <a href="careers/" class="arrow"></a></p>
+											<a href="mailto:CAREERS@themoderati.com" class="faded">CAREERS@themoderati.com</a>
+										</li>	
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+		
 				</div>
-
-				<span id="m-scroll" class="tcon-indicator is-inactive" aria-label="scroll" aria-hidden="true">
-				  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="tcon-svgchevron" viewBox="0 0 30 36">
-				    <path class="a3" d="M0,0l15,16L30,0"></path>
-				    <path class="a2" d="M0,10l15,16l15-16"></path>
-				    <path class="a1" d="M0,20l15,16l15-16"></path>
-				  </svg>
-				</span>
+				<div class="pages-container is-not-in-use">
+					<div class="mPage">
+						<section class="sec-01 section is-current-section">
+							<h1 class="page-title">01</h1>
+							<div class="page-scroll">
+								<span class="scroll">Scroll</span>
+								<div class="bar"></div>
+							</div>
+						</section>
+						<section class="sec-02 section">
+							<video class="video-section">
+								<source src="app/images/mod-backgroundhome.mp4" type="video/mp4">
+							</video>
+							<a href="#" class="play-btn"></a>
+						</section>
+						<footer class="footer section sec-03">
+							<a href="#" class="back-to-top"><img src="app/images/down-arrow-white.svg" alt="up arrow">BACK TO TOP</a>
+							<div class="contact-container">
+								<a href="#" class="address"><span class="address-logo"></span>121 S BROAD ST PHILA PA 19107</a>
+								<ul class="contact-links">
+									<li class="contact-link">
+										<p>215 732 7666</p>
+										<a href="mailto:info@themoderati.com" class="faded">info@themoderati.com</a>
+									</li>
+									<li class="contact-link">
+										<p>Work with us</p>
+										<a href="mailto:design@themoderati.com" class="faded">design@themoderati.com</a>
+									</li>
+									<li class="contact-link">
+										<p>Careers <a href="careers/" class="arrow"></a></p>
+										<a href="mailto:CAREERS@themoderati.com" class="faded">CAREERS@themoderati.com</a>
+									</li>	
+								</ul>
+							</div>
+							<ul class="social-icons">
+								<a href="http://twitter.com/MODWorldwide" id="twitter"><li class="icon"></li></a>
+								<a href="http://www.instagram.com/modworldwide/" id="instagram"><li class="icon"></li></a>
+								<a href="http://www.facebook.com/modworldwide" id="facebook"><li class="icon"></li></a>
+								<a href="http://www.linkedin.com/company/mod-worldwide" id="linkedin"><li class="icon"></li></a>
+							</ul>
+						</footer>
+					</div>
+					<div class="oPage">
+						<section class="sec-01 section is-current-section">
+							<h1 class="page-title">02</h1>
+							<div class="page-scroll">
+								<span class="scroll">Scroll</span>
+								<div class="bar"></div>
+							</div>
+						</section>
+						<section class="section sec-02">
+							<h2 class="section-title">Mission</h2>
+							<p>We strive to be an amazing creative partner, a trusted business advisor, fast, nimble, and easy to work with. We speak the language of design, guiding our clients to a more beautiful experience in everything we do.</p>
+						</section>
+						<section class="section sec-03">
+							<h2 class="section-title">Work</h2>
+							<p>We create for clients. Like the Swiss bank of design, our clients, and their work, remain private. If you'd like to getting a sense of what we're doing, drop us a line.</p>
+						</section>
+						<section class="section sec-04">
+							<h2 class="section-title">Strategy</h2>
+							<p>We care deeply that our work reflects the needs and goals of our clients. Through a dedicated approach to account management, strategy, creative execution, implementation, and feedback, we arrive at unique solutions that tell great stories.</p>
+						</section>
+						<footer class="footer section sec-05">
+							<a href="#" class="back-to-top"><img src="app/images/down-arrow-white.svg" alt="up arrow">BACK TO TOP</a>
+							<div class="contact-container">
+								<a href="#" class="address"><span class="address-logo"></span>121 S BROAD ST PHILA PA 19107</a>
+								<ul class="contact-links">
+									<li class="contact-link">
+										<p>215 732 7666</p>
+										<a href="mailto:info@themoderati.com" class="faded">info@themoderati.com</a>
+									</li>
+									<li class="contact-link">
+										<p>Work with us</p>
+										<a href="mailto:design@themoderati.com" class="faded">design@themoderati.com</a>
+									</li>
+									<li class="contact-link">
+										<p>Careers <a href="careers/" class="arrow"></a></p>
+										<a href="mailto:CAREERS@themoderati.com" class="faded">CAREERS@themoderati.com</a>
+									</li>	
+								</ul>
+							</div>
+							<ul class="social-icons">
+								<a href="http://twitter.com/MODWorldwide" id="twitter"><li class="icon"></li></a>
+								<a href="http://www.instagram.com/modworldwide/" id="instagram"><li class="icon"></li></a>
+								<a href="http://www.facebook.com/modworldwide" id="facebook"><li class="icon"></li></a>
+								<a href="http://www.linkedin.com/company/mod-worldwide" id="linkedin"><li class="icon"></li></a>
+							</ul>
+						</footer>
+					</div>
+					<div class="dPage">
+						<section class="sec-01 section is-current-section">
+							<h1 class="page-title">03</h1>
+							<div class="page-scroll">
+								<span class="scroll">Scroll</span>
+								<div class="bar"></div>
+							</div>
+						</section>
+						<section class="section sec-02">
+							<h2 class="section-title">The MODerati</h2>
+							<p>A team of entrepreneurial-minded, hyper-creative, coffee-drinking, champagne-sipping, bike-riding, dog-loving, hard-working doers.</p>
+						</section>
+						<section class="section sec-03">
+							<ul class="team">
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">John<br>Stanley</h3>
+										<h3 class="title">Chief Executive Officer</h3>
+										<a href="mailto:jws@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/JohnStanley" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Nina<br>Stanley</h3>
+										<h3 class="title">Chief Creative Officer</h3>
+										<a href="mailto:ns@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/NinaStanley" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Meg<br>O'Connor</h3>
+										<h3 class="title">Director of Accounts</h3>
+										<a href="mailto:mo@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Matt<br>Dobbs</h3>
+										<h3 class="title">Creative Director</h3>
+										<a href="mailto:md@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Claire<br>Ryan</h3>
+										<h3 class="title">Account Manager</h3>
+										<a href="mailto:ckr@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Donald<br>Wilmer</h3>
+										<h3 class="title">Design Director</h3>
+										<a href="mailto:md@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Louie<br>Greco</h3>
+										<h3 class="title">Graphic Designer</h3>
+										<a href="mailto:lg@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Christen<br>Regan</h3>
+										<h3 class="title">Director of Strategy</h3>
+										<a href="mailto:cr@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Melissa<br>Pelascini</h3>
+										<h3 class="title">Business and Personnel Manager</h3>
+										<a href="mailto:mp@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Kristen<br>Meade</h3>
+										<h3 class="title">Account Manager</h3>
+										<a href="mailto:km@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Joe<br>Aimonetti</h3>
+										<h3 class="title">Creative Director</h3>
+										<a href="mailto:ja@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Courtney<br>Vitale</h3>
+										<h3 class="title">Junior Graphic Designer</h3>
+										<a href="mailto:cv@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Alyssa<br>Vance</h3>
+										<h3 class="title">Junior Graphic Designer</h3>
+										<a href="mailto:av@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Jacqui<br>Simone</h3>
+										<h3 class="title">Junior Graphic Designer</h3>
+										<a href="mailto:js@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Shea<br>Durant</h3>
+										<h3 class="title">Video Editor</h3>
+										<a href="mailto:sd@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Nick<br>Chilson</h3>
+										<h3 class="title">Film Producer</h3>
+										<a href="mailto:nc@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Nick<br>Rome</h3>
+										<h3 class="title">Animator</h3>
+										<a href="mailto:nr@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Youjun<br>Mao</h3>
+										<h3 class="title">Animator</h3>
+										<a href="mailto:ym@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Chantel<br>Duncan</h3>
+										<h3 class="title">Front End Developer</h3>
+										<a href="mailto:cd@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Marc<br>D’Agostino</h3>
+										<h3 class="title">Film Producer</h3>
+										<a href="mailto:md@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										<h3 class="name">Andrew<br>Kuserk</h3>
+										<h3 class="title">Director of Emerging Technology and Animation</h3>
+										<a href="mailto:ak@themoderati.com" class="email"></a>
+										<a href="http://linkedin.com/" class="linkedin"></a>
+									</div>
+								</li>
+								<li class="team-member">
+									<div class="member-info">
+										
+									</div>
+								</li>
+							</ul>
+						</section>
+						<footer class="footer section sec-04">
+							<a href="#" class="back-to-top"><img src="app/images/down-arrow-white.svg" alt="up arrow">BACK TO TOP</a>
+							<div class="contact-container">
+								<a href="#" class="address"><span class="address-logo"></span>121 S BROAD ST PHILA PA 19107</a>
+								<ul class="contact-links">
+									<li class="contact-link">
+										<p>215 732 7666</p>
+										<a href="mailto:info@themoderati.com" class="faded">info@themoderati.com</a>
+									</li>
+									<li class="contact-link">
+										<p>Work with us</p>
+										<a href="mailto:design@themoderati.com" class="faded">design@themoderati.com</a>
+									</li>
+									<li class="contact-link">
+										<p>Careers <a href="careers/" class="arrow"></a></p>
+										<a href="mailto:CAREERS@themoderati.com" class="faded">CAREERS@themoderati.com</a>
+									</li>	
+								</ul>
+							</div>
+							<ul class="social-icons">
+								<a href="http://twitter.com/MODWorldwide" id="twitter"><li class="icon"></li></a>
+								<a href="http://www.instagram.com/modworldwide/" id="instagram"><li class="icon"></li></a>
+								<a href="http://www.facebook.com/modworldwide" id="facebook"><li class="icon"></li></a>
+								<a href="http://www.linkedin.com/company/mod-worldwide" id="linkedin"><li class="icon"></li></a>
+							</ul>
+						</footer>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="app/js/lib/minified/hammer.min.js" class="load"></script>
+<script>
+
+        var reqAnimationFrame = (function() {
+            return window[Hammer.prefixed(window, "requestAnimationFrame")] || function(callback) {
+                setTimeout(callback, 1000 / 60);
+            }
+        })();
+
+        function dirProp(direction, hProp, vProp) {
+            return (direction & Hammer.DIRECTION_HORIZONTAL) ? hProp : vProp
+        }
 
 
-<script src="app/bower_components/jquery/dist/jquery.min.js"></script>
+ </script>	
 <script src="app/bower_components/gsap/src/minified/TweenMax.min.js"></script>
 <script src="app/js/plugins/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js"></script>
- <script src="app/js/plugins/jquery.nicescroll/jquery.nicescroll.js"></script>
-<script src="app/js/lib/function.js"></script>
-<!--<script src="app/js.app.min.js"></script> -->
+<!-- <script src="app/js/plugins/jquery-scrollLock/jquery.scrollLock.js"></script> -->
+<!-- <script src="app/js/plugins/skrollr.min.js"></script> -->
+<script src="app/js/lib/function.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+<script src="app/js/lib/minified/load.min.js"></script>
 <script type='text/javascript' id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:1429/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
 //]]></script>

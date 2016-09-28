@@ -1,4 +1,5 @@
 @import "fonts";
+
 h1,
 h2,
 h3,
@@ -7,95 +8,89 @@ h5,
 h6,
 a,
 div{
-	font-family: "Bella Heavy";
 	text-transform: uppercase;
 	color: white;
 	letter-spacing: 3.6px;
 	font-style: normal;
+	margin: 0;
 }
 
 h1, div.slide-title{
-	font-weight: 400;
-	font-size: 100px;
-	line-height: 110px;
-	letter-spacing: -0.68px;
+	font:$mp-heading;
+	letter-spacing: 0;
+	
+	@include media($xl-desktop){
+		font:$xl-heading;
+	}
+	@include media($macbook-pro-13){
+		font:$heading;
+	}
+	@include media($h-ipad-max-screen){
+		font:$lg-heading;
+	}
+	@include media($v-iphone-6-plus){
+		font-size: 50px;
+		line-height: 60px;
+	}
+	@include media($v-iphone-5){
+		font-size: 35px;
+		line-height: 45px;
+	}
 }
 
-h2, div.slide-subtext{
-	font-family: "Avenir Next";
-	font-weight: 400;
-	font-size: 28px;
-	line-height: 36px;
-	letter-spacing: -0.64px;
+div.slide-subtext{
+
+	letter-spacing:0;
+	@include media($v-iphone-6-plus){
+		font-size: 26px;
+		line-height: 34px;
+	}
+
+	h2{
+		font:$mp-heading;
+		
+		@include media($xl-desktop){
+			font:$xl-heading;
+		}
+		@include media($macbook-pro-13){
+			font:$heading;	
+		}
+		@include media($h-ipad-max-screen){
+			font:$lg-heading;
+		}
+
+	}
+	h3{
+		font: $mp-av-black;
+		letter-spacing: 0;
+
+		@include media($xl-desktop){
+			font:$xl-av-black;
+		}
+		@include media($macbook-pro-13){
+			font:$av-black;
+		}
+		@include media($h-ipad-max-screen){
+			font:$lg-av-black;
+		}
+
+	}
+	p{
+		font: $mp-av-light;
+		text-transform: uppercase;
+
+		@include media($xl-desktop){
+			font:$xl-av-light;
+		}
+		@include media($macbook-pro-13){
+			font:$av-light;
+		}
+		@include media($h-ipad-max-screen){
+			font:$lg-av-light;
+		}
+
+	}
+
 }
 
 $content:'Avenir Next';
-
-#slide-contact{
-	#slide-contact-bg{
-		@include position(fixed, 0 0 0 0);
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-		background-size: cover;	
-		display: inherit;
-		background-image:url('../images/MOD-workspace.jpg');
-		@include filter(grayscale(100%) brightness(20%));
-	}
-	.slide-subtext{
-		width: 1500px;
-	}
-	width: 100%;
-	font-family: $content!important;
-	text-transform: uppercase;
-	.sub-head{
-		font-size: 28px;
-		font-weight: 300;
-		letter-spacing: 1px;
-	}
-	.address{
-		font-size: 16px;
-		margin-top:30px;
-		line-height: 20px;
-		letter-spacing: 1px;
-		font-weight: 300;
-	}
-	.email{
-		font-family: $content!important;
-		font-weight: 500;
-		font-size: 16px;
-		margin-top: 26px;
-	}
-	a{
-		font-family: $content!important;
-		font-weight: 500;
-		text-decoration: none;
-		font-size: 16px;
-		margin-top: 17px;
-	}
-	span{
-		@include transform(rotate(-90deg));
-		background-image: url("../images/down-arrow-white.svg");
-	    background-size: 100%;
-	    width: 47px;
-	    background-repeat: no-repeat;
-	    height: 97px;
-	    display: block;
-	    float: right;
-	    margin-right: 30%;
-	    margin-top: -87px;
-	    margin-bottom: 0;
-	}
-	.left-text, .right-text{
-		display: inline-block;
-		width:40%;
-		list-style: none;
-		padding: 0;
-		vertical-align: top;
-	}
-	.right-text{
-		li:last-child{
-			margin-top:30px;
-		}
-	}
-}

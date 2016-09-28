@@ -1,0 +1,37 @@
+.header{
+  padding-top: 20px;
+  margin-bottom: 87px;
+
+  @include media($mobile){
+    padding-top: 20px;
+    margin-bottom: 64px;
+  }
+
+  .link-logo{
+    margin-left: 5px;
+  }
+}
+
+.header-logo{
+	display: inline-block;
+	@include hide-text();
+	background-size: cover;
+	height: 23px;
+	width: 96px;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+
+  @include media($mobile){
+    height: 18px;
+  }
+}
+
+#sub-pg-header{
+  @include media($mobile){
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

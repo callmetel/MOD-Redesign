@@ -1,0 +1,83 @@
+.oPage{
+	section.sec-02{
+		background: white;
+		color: black;
+		text-align: left;
+		@include pad(29.85vh 24.68vw null 24.68vw);
+		margin:0 auto;
+
+		h2{
+			font: $heading;
+			color: black;
+			letter-spacing: 0;
+
+			@include media($xl-desktop){
+				font: $xl-heading;	
+			}
+		}
+		p{
+			font: $paragraph;
+			color: rgba(0,0,0,.3);
+			text-transform: initial;
+			letter-spacing: 0;
+
+			@include media($xl-desktop){
+				font: $xl-paragraph;	
+			}
+		}
+	}
+	section.sec-03{
+		background: rgba(0,0,0,.35);
+		color: white;
+		text-align: left;
+		@include pad(29.85vh 24.68vw null 24.68vw);
+		margin:0 auto;
+
+		h2{
+			font: $xl-heading;
+			color: white;
+			letter-spacing: 0;
+
+			@include media($xl-desktop){
+				font: $xl-heading;	
+			}
+		}
+		p{
+			font: $xl-paragraph;
+			color: white;
+			text-transform: initial;
+			letter-spacing: 0;
+
+			@include media($xl-desktop){
+				font: $xl-paragraph;	
+			}
+		}
+	}
+	section.sec-04{
+		background: white;
+		color: black;
+		text-align: left;
+		@include pad(29.85vh 24.68vw null 24.68vw);
+		margin:0 auto;
+
+		h2{
+			font: $heading;
+			color: black;
+			letter-spacing: 0;
+
+			@include media($xl-desktop){
+				font: $xl-heading;	
+			}
+		}
+		p{
+			font: $paragraph;
+			color: rgba(0,0,0,.3);
+			text-transform: initial;
+			letter-spacing: 0;
+
+			@include media($xl-desktop){
+				font: $xl-paragraph;	
+			}
+		}
+	}
+}

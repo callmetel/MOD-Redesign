@@ -1,0 +1,196 @@
+
+
+/* =Typography
+-------------------------------------------------------------- */
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size:20px;
+}
+h1, h2, h3, h4, h5, h6 {
+	@include clearfix;
+	clear: both;
+	float: none;
+	line-height: 1.25em;
+	margin-bottom: 20px;
+  font-weight: 400;
+  font-family: $title;
+  cursor: default;
+  
+  a, a:visited {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.productions-h1{
+  color: $white;
+  @include media($mobile){
+    font-size: 5rem;
+    margin-top: 6.5rem;
+    line-height: 5rem;
+  }
+  @include media($md-screen){
+    font-size: 5.75rem!important;
+  }
+  @include media($lg-screen){
+    font-size: 8.25rem!important;
+  }
+}
+
+h1 {
+  @include media($mobile){
+    font-size: 5rem;
+    margin-top: 6.5rem;
+    line-height: 5rem;
+  }
+  @include media($md-screen){
+ 	font-size: 7rem;
+  }
+  @include media($lg-screen){
+    font-size:8.71687rem;
+  }
+  span{
+  	vertical-align: middle;
+    padding-left: 3px;
+    padding-right: 3px;
+  	@include media($md-screen){
+  	  font-size: 12rem;
+  	}
+  	@include media($lg-screen){
+      font-size: 15.1531rem;
+	}
+  }
+
+}
+h2 {
+  font-family: $bold;
+  @include media($mobile){
+    font-size: 1.6rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include media($md-screen){
+	font-size:1.35rem;
+	letter-spacing: .05rem;
+  }
+  @include media($lg-screen){
+	font-size:1.875rem;
+	letter-spacing: 0;
+  }
+}
+h3 {
+	font-size:24px;
+}
+h4 {
+	font-size:20px;
+}
+h5 {
+	font-size:18px;
+}
+h6 {
+	font-size:16px;
+}
+
+p{
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  letter-spacing: .1rem;
+  font-family: $reg;
+  
+}
+#calendar span{
+  font-family: $reg;
+  
+}
+#our-story p, #donate p, #about-us p{
+  @include media($mobile){
+    @include pad(15px);
+  }
+}
+#about-us p{
+  @include media($mobile){
+    margin-top: 3.125rem;
+  }
+}
+
+blockquote {
+	background-color: #f9f9f9;
+	border-left:solid 5px $primary-color;
+	font-style: italic;
+	padding: 20px;
+}
+cite {
+	font-style: italic;
+}
+strong, b {
+	font-size:20px;
+	color: #000;
+	font-family: $title;
+}
+a, a:visited {
+  font-family: $bold;
+  @include transition(all .5s ease-in-out);
+  text-decoration: none;
+  color: black;
+
+  &:hover{
+    @include transition(all .5s ease-in-out);
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+  }
+}
+ul {
+	@extend %default-ul; // Adds browser default spacing back
+}
+ol {
+	@extend %default-ol; // Adds browser default spacing back
+}
+.entry-title {
+	font-family: $title;
+	text-align: center;
+
+	@include media($sm) {
+		font-size:40px;
+	}
+	@include media($smbg) {
+		font-size:65px;
+	}
+	@include media($md) {
+		font-size:100px;
+	}
+}
+#primary,
+#secondary {
+	font-family: $content;
+}
+
+.nav-desktop a, .nav-desktop a:visited{
+    @include media($md-screen){
+  font-size: 1.35rem;
+  padding:0!important;
+  }
+  @include media($lg-screen){
+  font-size: 1.41125rem;
+  padding:0!important;
+  }
+}
+
+#bg-h2c{
+  h1{
+    @include media($mobile){
+    font-size: 4rem;
+    margin-top: 6.5rem;
+    line-height: 5rem;
+    span{
+      font-size: 4.5rem;
+      line-height: 5rem;
+    }
+  }
+  }
+}

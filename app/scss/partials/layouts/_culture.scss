@@ -1,0 +1,456 @@
+.dPage{
+	section.sec-03{
+		@include position(absolute, 0 0 0 0);
+		margin:0 auto;
+	}
+	section.sec-02{
+		background: white;
+		color: black;
+		text-align: left;
+		@include pad(29.85vh 24.68vw null 24.68vw);
+		margin:0 auto;
+		@include position(absolute, 0 0 0 0);
+		margin:0 auto;
+
+		h2{
+			font: $heading;
+			color: black;
+			letter-spacing: 0;
+
+			@include media($xl-desktop){
+				font: $xl-heading;	
+			}
+		}
+		p{
+			font: $paragraph;
+			color: rgba(0,0,0,.3);
+			text-transform: initial;
+			letter-spacing: 0;
+
+			@include media($xl-desktop){
+				font: $xl-paragraph;	
+			}
+		}
+	}
+	section.sec-03{
+		@include position(absolute, 0 0 0 0);
+		margin:0 auto;
+		ul.team{
+			margin: 0;
+		    padding: 0;
+		    width: 100vw;
+		    height: 100vh;
+		    list-style: none;
+
+			li.team-member{
+				width: 50vw;
+			    height: 83vh;
+			    float:left;
+			    margin: 0;
+			    list-style: none;
+			    cursor: pointer;
+
+			    div.member-info {
+				    width: 100%;
+				    height: 100%;
+				    background-size: cover;
+				    background-position: 0;
+
+				    @include transition(all .75s ease-in-out);
+				    &:before{
+				    	content:'';
+				    	background: rgba(0,0,0,.85);
+				    	background: black;
+				    	display: block;
+				    	position: absolute; 
+				    	@include transition(all .75s ease-in-out);
+				    }
+
+					&.hover{
+						&:before{
+							@include filter(brightness(100%)!important);
+							@include transition(all .75s ease-in-out);
+						}
+					}
+				    
+
+				    h3.name{
+				    	font: normal normal 200 3.25rem/3rem 'Bella Heavy';
+				    	color: white;
+				    	width:58%;
+						margin-left: 12.29%;
+						padding-top: 28.36%;
+				    	@include media($xl-desktop){
+							font: normal normal 200 5.85rem/5.4rem 'Bella Heavy';
+				    	}
+				    }
+				    h3.title{
+				    	font: normal normal 200 3.25rem/3rem 'Bella Heavy';
+				    	color: white;
+				    	width:58%;
+						margin-left: 12.29%;
+				    	@include media($xl-desktop){
+							font: normal normal 200 5.85rem/5.4rem 'Bella Heavy';
+							color: $gray;
+				    	}
+				    	&.hover{
+				    		color:white;
+				    	}
+				    }
+				    a.email{
+						&.hover{
+							background-image: url('../images/email-icon-02.svg');
+							background-size: cover;
+							background-repeat: no-repeat;
+							width: 56px;
+							height:58px;
+							display: inline-block;
+							margin-left: 12.29%;
+
+						}
+				    }
+				    a.linkedin{
+						&.hover{
+							background-image: url('../images/linkedin-icon-02.svg');
+							background-size: cover;
+							background-repeat: no-repeat;
+							width: 56px;
+							height:58px;
+							display: inline-block;
+							margin-left: 5px;
+							margin-top: 80px;
+
+						}
+				    }
+				}
+			}
+			li.team-member:nth-child(1) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/john.jpg');
+					position: absolute;
+					z-index: -1;
+				}
+				
+			}
+			li.team-member:nth-child(2) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/nina.jpg');
+					position: absolute;
+					z-index: -1;	
+				}
+				
+			}
+			li.team-member:nth-child(3) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/meg.jpg');
+					position: absolute;
+					z-index: -1;
+				}
+				
+			}
+			li.team-member:nth-child(4) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/matt.jpg');
+					position: absolute;
+					z-index: -1;
+				}
+				
+			}
+			li.team-member:nth-child(5) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/claire.jpg');
+					position: absolute;
+					z-index: -1;
+				}
+				
+			}
+			li.team-member:nth-child(6) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/donald.jpg');
+				}
+				
+			}
+			li.team-member:nth-child(7) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/louie.jpg');
+					position: absolute;
+					z-index: -1;
+				}
+				
+			}
+			li.team-member:nth-child(8) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/christen.jpg');
+					position: absolute;
+					z-index: -1;
+				}
+				
+			}
+			li.team-member:nth-child(9) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/melissa.jpg');
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(10) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background-image: url('../images/kristen.jpg');
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(11) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background: black;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(12) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(45%));
+					background-size: cover;
+					background-position: 0;
+					background: #262626;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(13) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(45%));
+					background-size: cover;
+					background-position: 0;
+					background: #262626;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(14) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background: black;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(15) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background: black;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(16) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(45%));
+					background-size: cover;
+					background-position: 0;
+					background: #262626;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(17) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(45%));
+					background-size: cover;
+					background-position: 0;
+					background: #262626;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(18) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background: black;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(19) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background: black;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(20) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(45%));
+					background-size: cover;
+					background-position: 0;
+					background: #262626;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(21) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(45%));
+					background-size: cover;
+					background-position: 0;
+					background: #262626;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+			li.team-member:nth-child(22) > div.member-info{
+				&:before{
+					content:'';
+					display: block;
+					width:50%;
+					height:83%;
+					@include filter(brightness(15%));
+					background-size: cover;
+					background-position: 0;
+					background: black;
+					position: absolute;
+					z-index: -1;
+				}
+			}
+		}
+			
+	}
+	footer{
+			margin-top: 185.5vh;
+			position: relative;
+			&.section{
+				height: 100vh;
+				width:100vw;
+				text-align: center;
+				//@include position(absolute, null 0 0 0);
+				overflow: hidden;
+			}
+	}
+	
+}

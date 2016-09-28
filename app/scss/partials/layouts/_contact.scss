@@ -1,0 +1,145 @@
+#slide-contact{
+	#slide-contact-bg{
+		@include position(fixed, 0 0 0 0);
+		z-index: 1;
+		width: 150%;
+		height: 150%;
+		display: inherit;
+	}
+	.contact-container{
+		margin-top: 7.875vh;
+		height: 220px;
+		width:38.31vw;
+
+		@include media($xl-desktop){
+			height: 381px;
+		}
+		@include media($h-ipad-max-screen){
+			width: 42.31vw;
+			height:195px;
+		}
+
+		.address{
+			font: normal normal 200 2.25rem/2.0325rem 'Bella Heavy';
+			letter-spacing: 1px;
+			text-decoration: none;
+			width: 77.178px;
+			color: rgba(255,255,255,0.35);
+			margin-right: 7.885vw;
+			display: inline-block;
+			vertical-align: top;
+			
+			@include media($xl-desktop){
+				font: normal normal 200 3.8075rem/3.43938rem 'Bella Heavy';
+				width: 130.61px;
+			}
+			@include media($h-ipad-max-screen){
+				font: normal normal 200 1.97313rem/1.7825rem 'Bella Heavy';
+				width: 68.68px;
+				margin-right: 5.099vw;
+			}
+
+			span.address-logo{
+				background-image: url('../images/MOD_LOGO-WHITE.svg');
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 76.178px;
+				height: 29px;
+				display:block;
+
+				@include media($xl-desktop){
+					width: 130.61px;
+					height: 3.43938rem;
+				}
+				@include media($h-ipad-max-screen){
+					width: 68.68px;
+					height: 1.7825rem;
+				}
+			}
+		}
+		ul.contact-links{
+			display: inline-block;
+			vertical-align: top;
+			margin:0;
+			list-style:none;
+			height:100%;
+			text-align: left;
+
+			li.contact-link{
+				margin:0;
+				height:42.67%;
+				padding-top: 13%;
+				padding-bottom: 20%;
+				text-align: left;
+				letter-spacing: 2px;
+				border-bottom: .25px solid rgba(255,255,255,0.35);
+				
+
+				@include media($xl-desktop){
+					padding-top: 15%;
+				}
+				@include media($h-ipad-max-screen){
+					padding-top: 10%;
+					border-bottom: 1px solid rgba(255,255,255,0.35);
+				}
+
+
+				p{
+					margin:0;
+					font: normal normal 200 0.75rem/1rem 'Avenir W01';
+
+					@include media($xl-desktop){
+						font: normal normal 200 1.26875rem/1.69188rem 'Avenir W01';
+					}
+					@include media($h-ipad-max-screen){
+						font: normal normal 200 0.6575rem/0.876875rem 'Avenir W01';
+
+					}
+				}
+				a{
+					font: normal normal 200 0.75rem/1rem 'Avenir W01';
+					letter-spacing: 2px;
+					cursor: pointer;
+					text-decoration: none;
+					@include media($xl-desktop){
+						font: normal normal 200 1.26875rem/1.69188rem 'Avenir W01';
+					}
+				}
+			}
+			li.contact-link:first-child{
+				height:27.04%;
+				padding:0;
+			}
+			li.contact-link:last-child{
+				height:29.88%;
+				padding:0;
+				padding-top: 13.398%;
+				line-height: 0;
+				line-height: 16px;vertical-align: middle;
+				border-bottom: none;
+				@include media($h-ipad-max-screen){
+					padding-top: 13%;
+				}
+
+				a.arrow{
+					width:14.926px;
+					height: 14.926px;
+					background-image: url('../images/down-arrow-white.svg');
+					background-size: cover;
+					display:inline-block;
+					margin-top: -4px;
+					line-height: 16px;vertical-align: middle;
+					@include transform(rotate(-90deg));
+
+					@include media($xl-desktop){
+						width:25.259px;
+						height:25.259px;
+						margin-top: -6.76px;
+					}
+				}
+			}
+		}
+	}
+	
+
+}

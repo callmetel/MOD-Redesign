@@ -4,4 +4,20 @@ body{
 	height:100vh;
 	overflow: hidden;
 	background: black;
+	cursor: grab!important;
+}
+
+$transBlack: rgba(0,0,0,.8);
+$gray: #4D4D4D;
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
 }

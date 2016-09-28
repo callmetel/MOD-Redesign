@@ -1,0 +1,26 @@
+div#page-indicators{
+	@include position(fixed, 8.125vh 1.09vw null null);
+	z-index: 9989;
+
+	a{
+		text-decoration: none;
+		font: normal normal 200 2.5rem/4.375rem 'Bella Heavy';
+		letter-spacing: 0;
+		color: rgba(255,255,255,.35);
+		cursor: pointer;
+		@include transition(color .35s ease-in-out);
+
+		&.is-current-page{
+			color: white;
+		}
+		&:hover{
+			color: white;
+            @include transition(color .35s ease-in-out);
+		}
+
+		@include media($xl-desktop){
+			font: normal normal 200 5rem/8.75rem 'Bella Heavy';
+		}
+	}
+
+}

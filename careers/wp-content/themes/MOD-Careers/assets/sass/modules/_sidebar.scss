@@ -1,0 +1,45 @@
+body{
+	width: 100%;
+    height: 100%;
+}
+aside.sidebar{
+	@include position(fixed, 100px null null 50px);
+	width: 300px;
+	text-align: left;
+	img.logo{
+		width: 130px;
+		margin:0;
+		text-align: left;
+	}
+	h1.statement{
+		font-size: 21px;
+		font-family: 'Avenir Next';
+		font-weight: 400;
+		line-height: 28px;
+		width: 80%;
+		margin-top: 130px;
+
+	}
+
+}
+div.right-sidebar{
+	@include position(absolute, 100px 50px null null);
+	width: 200px;
+	background: black;
+	color: white;
+	text-align: right;
+	font-size: .95rem;
+	line-height: 1.35rem;
+	a.a-side{
+	color: white!important;
+}
+ul.social-media{
+	list-style: none;
+}
+a#career-email{
+	margin-left: -50px;
+}
+.address{
+	margin-bottom: 20px;
+}
+}
